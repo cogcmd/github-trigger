@@ -9,3 +9,4 @@ deploy:
 
 docker:
 	docker build -t cogcmd/github-trigger:dev .
+	docker push cogcmd/github-trigger:dev
