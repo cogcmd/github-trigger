@@ -8,3 +8,4 @@ deploy:
 	cogctl bundles create ./config.yaml
 
 docker:
+	docker build -t cogcmd/github-trigger:dev .
