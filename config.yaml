@@ -1,0 +1,13 @@
+---
+cog_bundle_version: 2
+name: github-trigger
+version: "0.1"
+docker:
+  image: cogcmd/github-trigger
+  tag: "dev"
+commands:
+  verify:
+    documentation: "Verify a Github webhook body"
+    executable: "/usr/local/bin/github_verify.rb"
+    enforcing: false
+    rules: []
