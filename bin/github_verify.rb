@@ -12,14 +12,14 @@ require 'openssl'
 # Obtain the checksum from the webhook request header. All headers are
 # available from the command environment
 def signature(cog_env)
-  header_value = cog_env[0]["headers"]["x-hub-signature"]
+  header_value = cog_env["headers"]["x-hub-signature"]
   header_value.sub("sha1=", "")
 end
 
 # Compute our own checksum by hashing the raw body of the request with
 # our shared secret
 def compute_signature(cog_env, secret)
-  body = cog_env[0]["raw_body"]
+  body = cog_env["raw_body"]
   OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha1'), secret, body)
 end
 

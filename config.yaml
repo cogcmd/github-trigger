@@ -10,4 +10,3 @@ commands:
     documentation: "Verify a Github webhook body"
     executable: "/usr/local/bin/github_verify.rb"
     enforcing: false
-    rules: []
